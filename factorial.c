@@ -17,9 +17,9 @@ int main()
 {
 	int fact;
 	int n;
-	printf ("\n Dame un numero:");
+	printf ("\nDame un numero: ");
 	scanf("%d",&n);
 	fact=factorial(n);
-	printf("\n El factorial =%d \n",fact);
+	printf("\nEl factorial es = %d \n",fact);
 	return 0;
 }
