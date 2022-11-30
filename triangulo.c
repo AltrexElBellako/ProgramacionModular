@@ -2,10 +2,10 @@
 //De la primaria: Teorema de Pitágoras
 //La suma de cada cateto al cuadrado es igual a la hipotenusa al cuadrado
 //Triángulo rectangulo: un ángulo de 90°
-//
-//Cálculo de la hipotenusa
+//Programa para calcular el cálculo de características de triángulos
 #include <stdio.h>
 #include <math.h>
+//Cálculo de la hipotenusa
 void hipotenusa ()
 {
         int co, ca;
@@ -17,6 +17,7 @@ void hipotenusa ()
         h = sqrt (co*co+ca*ca);
         printf ("La hipotenusa mide: %f",h);
 }
+//Calculo del área de un triángulo
 void area ()
 {
         int base, alt;
@@ -28,6 +29,7 @@ void area ()
         a = base*alt/2;
         printf ("El area del triangulo es %f",a);
 }
+//Calculo de tercer ángulo
 void angulo ()
 {
         float a1, a2, a3;
@@ -37,6 +39,7 @@ void angulo ()
         printf("El tercer angulo mide: %f",a3);
 }
 int main()
+//Se imprimen y se mandan a llamar las posibles funciones requeridas por el usuario
 {
         char opc;
         printf("a)Hipotenusa de un triangulo rectangulo\n");
