@@ -1,36 +1,45 @@
 //Programa para sumar matrices
 #include <stdio.h>
-void sumaMatriz(int tamaño, int a[][10],int b[][10],int c[][10])
+int main () {
+int filasm, columnasm, aa[10][10], b[10][10], cc[10][10],i=0, j=0;;
+	
+printf("\nSuma de  matrices de 2x2 hasta 10x10\n\n");
+//Se solicitan la cantidad de filas para la matriz y se almacena en fila
+	printf("\nDe cuantas filas es la matriz? ");
+        scanf("%d", &filasm);
+//Se solicitan la cantidad de columnas para la matriz y se almacena en columna
+        printf("De cuantas columas es la matriz? ");
+        scanf("%d", &columnasm);
+	printf("\n");
+        for(i = 0;i < filasm;i++)
 {
-	for (int i=0;i<tamaño;i++)
-	{
+        for(j = 0;j < columnasm;j++)
+//Se solicitan los elementos de la matriz1 y se almacenan
+{
+	printf("Introduzca un valor para la matriz 1 posición [%d],[%d]: ",i+1,j+1);
+	scanf("%i",&aa[i][j]);
+}
+}
 
-		for (int j=0;j<tamaño;j++)
-		{
-			c[i][j]=a[i][j]+b[i][j];
-			printf("%d", c[i][j]);
-		}
-	}
-}
-void tecleeMatriz(int tamaño, int a[][10],int b[][10])
+	for (int i=0;i<filasm;i++)
 {
-	for (int i=0;i<tamaño;i++)
-	{
-		for (int j=0;j<tamaño;j++)
-		{
-			printf("Ingrese el valor de la matriz a posicion[%d],[%d]",i+1,j+1);
-			scanf("%i",&a[i][j]);
-			printf("Ingrese el valor de la matriz b posicion [%d],[%d]",i+1,j+1);
-			scanf("%i",&b[i][j]);
-		}
-	}
-}
-int main ()
+	for (int j=0;j<columnasm;j++)
+//Se solicitan los elementos de la matriz2 y se almacenan
 {
-int tamaño, a[10][10], b[10][10], c[10][10];
-			printf("Teclee tamaño de la matriz ");
-			scanf("%d",&tamaño);
-		       	tecleeMatriz(tamaño,a,b);
-				sumaMatriz(tamaño,a,b,c);
-				return 0;
+	printf("Introduzca un valor para la matriz 2 posición [%d],[%d]: ",i+1,j+1);
+	scanf("%i",&b[i][j]);
+}
+}
+//Se realiza la suma y el valor del resultado se almacena para luego imprimirse
+	printf("\nMatriz Resultado\n");
+	for (int i=0;i<filasm;i++)
+{
+	for (int j=0;j<columnasm;j++)
+{{
+	cc[i][j]=aa[i][j]+b[i][j];
+}
+	printf("%d\t", cc [i][j]);
+}
+	printf("\n");
+}
 }
