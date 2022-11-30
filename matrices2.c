@@ -1,55 +1,52 @@
+//Programa de multiplicación de matrices de 2x2
 #include <stdio.h>
+int main () {	
+int ii,jj,ccc,matriz1[2][2],matriz2[2][2],resultado=0, result[2][2];
 
-void main(void)
+	printf("\nMultiplicacion de matrices de 2x2\n\n");
+//Se indica que el Producto Matriz está en ceros
+	for(ii=0;ii<2;ii++)
+	for(jj=0;jj<2;jj++)
+	result[ii][jj]=0;
+	for(ii=0;ii<2;ii++)
 {
-	int matriz1[2][2],matriz2[2][2],resultado=0,result[2][2];
-	int i,j,c;
-	for(i=0;i<2;i++)
-	for(j=0;j<2;j++)
-	result[i][j]=0;
-	for(i=0;i<2;i++){
-	for(j=0;j<2;j++){
-	printf("\nIntroduzca un valor para la matriz 1[%d][%d]: ",i+1,j+1);
-	scanf("%d", &matriz1[i][j]);
+	for(jj=0;jj<2;jj++)
+//Se solicitan los elementos de la matriz1 y se almacenan
+{
+	printf("Introduzca un valor para la matriz 1 posición (%d,%d): ",ii+1,jj+1);
+	scanf("%d", &matriz1[ii][jj]);
 }
 }
-	for(i=0;i<2;i++){
-	for(j=0;j<2;j++){
-	printf("\nIntroduzca un valor para la matriz 2[%d][%d]: ",i+1,j+1);
-	scanf("%d", &matriz2[i][j]);	
+	for(ii=0;ii<2;ii++)
+{
+	for(jj=0;jj<2;jj++)
+//Se solicitan los elementos de la matriz2 y se almacenan
+{
+	printf("Introduzca un valor para la matriz 2 posición (%d,%d): ",ii+1,jj+1);
+	scanf("%d", &matriz2[ii][jj]);
 }
-}
-	for(i=0;i<2;i++){
-	for(c=0;c<2;c++){
-	for(j=0;j<2;j++){
-	resultado=resultado+(matriz1[i][j]*matriz2[j][c]);
-}
-	result[i][c]=resultado;
-	resultado=0;
 }	
+//Se realiza la multiplicación y el valor del producto se almacena
+	for(ii=0;ii<2;ii++)
+{
+	for(ccc=0;ccc<2;ccc++)
+{
+	for(jj=0;jj<2;jj++)
+{
+	resultado=resultado+(matriz1[ii][jj]*matriz2[jj][ccc]);
 }
-//Matriz 1
-	printf("\nMatriz 1\n");
-	for(i=0;i<2;i++){
-	for(j=0;j<2;j++){
-	printf("\t%.2d",matriz1[i][j]);
+	result[ii][ccc]=resultado;
+	resultado=0;
 }
-	printf("\n");
 }
-//Matriz 2
-	printf("\nMatriz 2\n");
-	for(i=0;i<2;i++){
-	for(j=0;j<2;j++){
-	printf("\t%.2d",matriz2[i][j]);
-}
-	printf("\n");
-}
-//Matriz multiplicación
+//Impresión del Producto Matriz
 	printf("\nProducto Matriz\n");
-	for(i=0;i<2;i++){
-	for(c=0;c<2;c++){
-	printf("\t%.2d",result[i][c]);
+	for(ii=0;ii<2;ii++)
+{
+	for(ccc=0;ccc<2;ccc++)
+{
+	printf("%d\t",result[ii][ccc]);
 }
 	printf("\n");
 }
-	}
+}
