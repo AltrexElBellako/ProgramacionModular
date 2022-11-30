@@ -1,6 +1,6 @@
+//Programa para calcular el área de cuadrilateros
 #include <stdio.h>
-
-//calcular el area de un cuadrado
+//Cálculo el área de un cuadrado
 void cuadrado()
 {
         int  lado;
@@ -11,7 +11,7 @@ void cuadrado()
         area = (lado*lado);
         printf("El area del cuadrado es: %f",area);
 }
-//Calculo de area de un rectangulo
+//Cálculo del área de un rectángulo
 void rectangulo ()
 {
         int base, altura;
@@ -23,7 +23,7 @@ void rectangulo ()
         area2 = base*altura;
         printf("El area del rectangulo es: %f",area2);
 }
-//Calculo de area de un trapecio
+//Cálculo del área de un trapecio
 void trapecio ()
 {
         int base_mayor, base_menor, altura_2;
@@ -36,10 +36,9 @@ void trapecio ()
         scanf("%d",&altura_2);
         area3 = (((base_mayor+base_menor)*altura_2)/2);
         printf("El area del trapecio es: %f",area3);
-
 }
 int main ()
-
+//Se llaman las funciones a ejecutar elegidas por el usuario
 {
         char opc;
         printf("1)area de un rectangulo\n");
