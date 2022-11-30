@@ -103,7 +103,7 @@ default:
 }
 break;
 		case 3:
-//Cálculo de temperatura de Celcius a Fahrenheit y Kelvin
+//Programa para calcular equivalencias entre temperaturas Celcius, Fahrenheit y Kelvin
 	printf("\nConversión de medidas de temperatura\n\n");
 //Se solicita la opcion a realizar de las opciones que guarda el programa de temperatura y se guarda en opc3
         printf("g)Equivalencias de Celcius a Fahrenheit y Kelvin\n");
