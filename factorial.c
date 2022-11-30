@@ -1,6 +1,7 @@
-// Funcionamiento de un factorial
+//Funcionamiento de un factorial
 #include <stdio.h>
 int factorial (int n)
+//Instrucciones para el funcionamiento del factorial
 {
 	long int f;
 	if(n==0)
@@ -14,6 +15,7 @@ int factorial (int n)
 	return f;
 }
 int main()
+//Funcion principal, se obtienen los argumentos para la funcion recursiva de factorial y la impresión del resultado
 {
 	int fact;
 	int n;
