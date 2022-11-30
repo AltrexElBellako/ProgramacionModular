@@ -1,6 +1,6 @@
 //Programa para calcular equivalencias entre temperaturas Celcius, Fahrenheit y Kelvin.
 #include <stdio.h>
-//Calculo de temperatuta de Celcius a Fahrenheit y Kelvin
+//Cálculo de temperatura de Celcius a Fahrenheit y Kelvin
 void celcius()
 {
         float celcius,fahrenheit,kelvin;
@@ -12,7 +12,7 @@ void celcius()
         kelvin = celcius+273.15;
         printf("El equivalente en Kelvin es de: %f",kelvin);
 }
-//Calculo de temperatura de Farenheit a Celcius y Kelvin
+//Cálculo de temperatura de Farenheit a Celcius y Kelvin
 void fahrenheit ()
 {
         float celcius2,fahrenheit2,kelvin2;
@@ -25,7 +25,7 @@ void fahrenheit ()
         printf("El equivalente en Kelvin es de: %f",kelvin2);
 
 }
-//Calculo de temperatura de Kelvin a Celcius y Farenheit
+//Cálculo de temperatura de Kelvin a Celcius y Farenheit
 void kelvin ()
 {
         float celcius3,fahrenheit3,kelvin3;
@@ -39,7 +39,7 @@ void kelvin ()
 
 }
 int main ()
-
+//Se imprimen y se mandan a llamar las posibles funciones requeridas por el usuario
 {
         char opc;
         printf("a)Equivalencias de Celcius a Fahrenheit y Kelvin\n");
